@@ -1,0 +1,25 @@
+[package]
+name = "zksnarks"
+description = 'zksnaarks standard library'
+version = "0.0.1"
+edition = "2021"
+license = "Apache-2.0"
+homepage = 'https://github.com/KogarashiNetwork/Kogarashi/'
+repository = 'https://github.com/KogarashiNetwork/Kogarashi/'
+readme = 'README.md'
+categories = ["cryptography"]
+keywords = ["zkp", "blockchain", "elliptic-curve"]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs", "--html-in-header", "katex-header.html"]
+
+[dependencies]
+zkstd = { version = "0.0.22", default-features = false }
+jub-jub = { version = "0.0.20", default-features = false }
+bls-12-381 = { version = "0.0.23", default-features = false }
+poly-commit = { version = "0.0.13", default-features = false }
+ec-pairing = { version = "0.0.14", default-features = false }
+merlin = { version = "3.0", default-features = false }
+rand = { version = "0.8.5", default-features = false, features = ["getrandom"]}
+parity-scale-codec = { version = "2.0.0", default-features = false, features = ["derive"] }
